@@ -11,7 +11,7 @@ const authRoutes = require("./routes/auth.route")
 const messageRoutes = require("./routes/message.route")
 
 const PORT = process.env.PORT || 5001
-const __dirname = path.resolve()
+
 // Middlewares
 
 const corsOptions = {
