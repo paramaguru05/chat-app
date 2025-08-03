@@ -51,7 +51,7 @@ exports.login = async (req,res) =>{
         
         let user = await User.findOne({email:email}).select("+password")
       
-        if(!user) return res.status(400).json({status:"Fail",message:"incorrect email or+password"});
+        if(!user) return res.status(400).json({status:"Fail",message:"incorrect email or password"});
         
         let isPasswordMatch = await user.matchPassword(password,user.password)
        
