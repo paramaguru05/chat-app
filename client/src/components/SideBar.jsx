@@ -49,7 +49,7 @@ const SideBar = () => {
       </div>
       <div className=' h-[92%] overflow-y-auto'>
         {
-          users.length && users.map((val,index)=>{
+          users.length ? users.map((val,index)=>{
             return(
                       <div key={index} role='button' onClick={()=> handleSelectUser(val)}  className={`mt-5 h-20 ${seletectedUser?._id === val._id ? "bg-base-300":"" }  flex items-center p-2 cursor-pointer`}>
                         {
@@ -72,7 +72,7 @@ const SideBar = () => {
                           </div>
                         </div>
             )
-          })
+          }) : <p className='text-center mt-5'>No users found</p>
         }
       </div>
     </aside>
